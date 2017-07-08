@@ -1,0 +1,9 @@
+[Unit]
+Description=Add the capemgr slots to the cape group
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/capemgr.sh
+
+[Install]
+WantedBy=multi-user.target
