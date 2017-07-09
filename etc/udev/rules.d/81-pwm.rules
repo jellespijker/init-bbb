@@ -1,0 +1,6 @@
+ACTION!="add", GOTO="pwm_end"
+
+KERNEL=="pwm-[0-9]*:[0-9]*", SUBSYSTEM=="pwm", ACTION=="add", PROGRAM="/usr/bin/pwm_pin.sh %p"
+KERNELS=="pwmchip[0-9]*", SUBSYSTEMS=="pwm", ACTION=="add", PROGRAM="/usr/bin/pwm_pin.sh enable %p"
+
+LABEL="pwm_end"

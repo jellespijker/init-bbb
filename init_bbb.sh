@@ -14,13 +14,15 @@ sudo cp -r ./usr /
 sudo cp -r ./home/.bashrc /home/$USER/.bashrc
 sudo chown $USER:$USER /home/$USER/.bashrc
 
-echo "Adding gpio and cape group"
+echo "Adding gpio, cape and pwm group"
 sudo groupadd -f cape
 sudo groupadd -f gpio
+sudo groupadd -f pwm
 
-echo "Add current user to gpio and cape group"
+echo "Add current user to gpio cape, pwm group"
 sudo usermod -a -G cape $USER
 sudo usermod -a -G gpio $USER
+sudo usermod -a -G pwm $USER
 
 echo "Enable capemgr_usr service"
 sudo systemctl enable capemgr_usr.service
