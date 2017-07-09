@@ -3,7 +3,8 @@
 #!/bin/bash
 
 export DISK=/dev/mmcblk0
-
+mkdir build
+cd build
 echo "----------- Setup crosscompiler -----------"
 wget -c https://releases.linaro.org/components/toolchain/binaries/5.4-2017.05/arm-linux-gnueabihf/gcc-linaro-5.4.1-2017.05-x86_64_arm-linux-gnueabihf.tar.xz
 tar xf gcc-linaro-5.4.1-2017.05-x86_64_arm-linux-gnueabihf.tar.xz
